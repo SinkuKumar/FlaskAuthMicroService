@@ -76,3 +76,26 @@ The test cases cover the registration, login, and protected route functionality 
 ## Notes
 
 - This API uses SQLite as the database. For production, consider using a more robust database like PostgreSQL.
+
+## Docker
+
+To host the Flask app as a microservice using Docker, you'll need to follow these steps:
+
+
+1. **Build the Docker image:**
+   Navigate to the directory containing the Dockerfile and the Flask app code and run:
+
+```bash
+docker build -t flask-microservice .
+```
+
+2. **Run the Docker container:**
+   After building the image, run the Docker container:
+
+```bash
+docker run -p 5000:5001 flask-microservice
+```
+
+This command maps port 5000 from the container to port 5001 on your host machine.
+
+Now, your Flask application is running as a microservice within a Docker container. You can access the API using `http://localhost:5001`. Replace `localhost` with the appropriate host if you're running Docker on a remote machine.
