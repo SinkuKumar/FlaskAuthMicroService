@@ -20,7 +20,7 @@ Make sure you have the following installed:
 2. Install the required dependencies:
 
     ```bash
-    pip install Flask Flask-SQLAlchemy Flask-JWT-Extended bcrypt
+    pip install requirements.txt
     ```
 
 3. Set up the database URI in the `app.config['SQLALCHEMY_DATABASE_URI']` variable in `app.py`.
